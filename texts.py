@@ -61,10 +61,10 @@ TEXTS = {
             "Телеграм: https://t.me/khatlon_cargo"
         ),
         "prices_text": (
-            "Наш тариф:\n\n"
-            "Доставка\n"
-            "🚚 от кг - 2.5$\n"
-            "📦 от куб - 250$\n\n"
+            "Тарифи мо аз Хитой:\n\n"
+            "🚚 Аз 1 то 20 кг — 27 сомон/кг\n"
+            "🚚 Аз 21 то 30 кг — 25 сомон/кг\n"
+            "🚚 Аз 31 кг ва бештар — 23 сомон/кг\n\n"
             "Срок доставки 15-25 дней\n\n"
             "Крупногабаритные грузы рассчитываются как куб!!!"
         ),
@@ -83,6 +83,29 @@ TEXTS = {
             "收货人: Khatlon\n"
             "手机号: 15158966710\n"
             "浙江省义乌市后宅街道柳青路1577号里面C区1楼 2号杜尚别仓库2号门 ФИО и номер телефона"
+        ),
+        "address_caption_china_bokhtar": (
+            "Адреси Бохтар👇🏻\n"
+            "收货人：\n"
+            "手机号：15068066887\n"
+            "浙江省金华市义乌市 后宅街道柳青路1577号里面C区1楼 2号 XAT-1"
+        ),
+        "address_caption_china_qubodiyon": (
+            "Аддреси Қубодиён👇🏻\n"
+            "收货人：\n"
+            "手机号：15068066887\n"
+            "浙江省金华市义乌市 后宅街道柳青路1577号里面C区1楼 2号 XAT-2"
+        ),
+        "address_caption_tajikistan_bokhtar": (
+            "📍 <b>Адрес для Бохтара:</b>\n"
+            "кучаи С.Айни 67\n"
+            "(Назди Кругавои ш.Бохтар, назди Маркази омузишии 'Зам-зам')\n\n"
+            "📞 Телефон: +992 93 600 53 03"
+        ),
+        "address_caption_tajikistan_qubodiyon": (
+            "📍 <b>Адрес для Кабодиёна:</b>\n"
+            "Кучаи М.Турсунзода хонаи 45\n\n"
+            "📞 Телефон: +992 93 539 84 48"
         ),
         "address_caption_tajikistan": (
             "📍 <b>Наш адрес в Душанбе:</b>\n"
@@ -310,10 +333,10 @@ TEXTS = {
             "Telegram: https://t.me/khatlon_cargo"
         ),
         "prices_text": (
-            "Our Tariff:\n\n"
-            "Delivery\n"
-            "🚚 per kg - 2.5$\n"
-            "📦 per cube - 250$\n\n"
+            "Our tariff from China:\n\n"
+            "🚚 From 1 to 20 kg — 27 somoni/kg\n"
+            "🚚 From 21 to 30 kg — 25 somoni/kg\n"
+            "🚚 From 31 kg and above — 23 somoni/kg\n\n"
             "Delivery time 15-25 days\n\n"
             "Oversized cargo is calculated as cube!!!"
         ),
@@ -332,6 +355,29 @@ TEXTS = {
             "收货人: Khatlon\n"
             "手机号: 15158966710\n"
             "浙江省义乌市后宅街道柳青路1577号里面C区1楼 2号杜尚别仓库2号门 Name and phone number"
+        ),
+        "address_caption_china_bokhtar": (
+            "Адреси Бохтар👇🏻\n"
+            "收货人：\n"
+            "手机号：15068066887\n"
+            "浙江省金华市义乌市 后宅街道柳青路1577号里面C区1楼 2号 XAT-1"
+        ),
+        "address_caption_china_qubodiyon": (
+            "Аддреси Қубодиён👇🏻\n"
+            "收货人：\n"
+            "手机号：15068066887\n"
+            "浙江省金华市义乌市 后宅街道柳青路1577号里面C区1楼 2号 XAT-2"
+        ),
+        "address_caption_tajikistan_bokhtar": (
+            "📍 <b>Address for Bokhtar:</b>\n"
+            "S.Ayni Street 67\n"
+            "(Near Khargovar Bokhtar, near Zam-zam educational center)\n\n"
+            "📞 Phone: +992 93 600 53 03"
+        ),
+        "address_caption_tajikistan_qubodiyon": (
+            "📍 <b>Address for Qubodiyon:</b>\n"
+            "M.Tursunzoda Street, House 45\n\n"
+            "📞 Phone: +992 93 539 84 48"
         ),
         "address_caption_tajikistan": (
             "📍 <b>Our address in Dushanbe:</b>\n"
@@ -551,10 +597,10 @@ TEXTS = {
             "Телеграм: https://t.me/khatlon_cargo"
         ),
         "prices_text": (
-            "Тарифи мо:\n\n"
-            "Расонидан\n"
-            "🚚 аз кг - 2.5$\n"
-            "📦 аз куб - 250$\n\n"
+            "Тарифи мо аз Хитой:\n\n"
+            "🚚 Аз 1 то 20 кг — 27 сомонӣ/кг\n"
+            "🚚 Аз 21 то 30 кг — 25 сомонӣ/кг\n"
+            "🚚 Аз 31 кг ва бештар — 23 сомонӣ/кг\n\n"
             "Мӯҳлати расонидан 15-25 рӯз\n\n"
             "Борҳои калонҳаҷм чун куб ҳисоб карда мешаванд!!!"
         ),
@@ -573,6 +619,29 @@ TEXTS = {
             "收货人: Khatlon\n"
             "手机号: 15158966710\n"
             "浙江省义乌市后宅街道柳青路1577号里面C区1楼 2号杜尚别仓库2号门 Ном ва рақами телефон"
+        ),
+        "address_caption_china_bokhtar": (
+            "Адреси Бохтар👇🏻\n"
+            "收货人：\n"
+            "手机号：15068066887\n"
+            "浙江省金华市义乌市 后宅街道柳青路1577号里面C区1楼 2号 XAT-1"
+        ),
+        "address_caption_china_qubodiyon": (
+            "Аддреси Қубодиён👇🏻\n"
+            "收货人：\n"
+            "手机号：15068066887\n"
+            "浙江省金华市义乌市 后宅街道柳青路1577号里面C区1楼 2号 XAT-2"
+        ),
+        "address_caption_tajikistan_bokhtar": (
+            "📍 <b>Суроғаи Бохтар:</b>\n"
+            "Кӯчаи С.Айни 67\n"
+            "(Назди Қурғонои Бохтар, назди Маркази омузишии 'Зам-зам')\n\n"
+            "📞 Телефон: +992 93 600 53 03"
+        ),
+        "address_caption_tajikistan_qubodiyon": (
+            "📍 <b>Суроғаи Қубодиён:</b>\n"
+            "Кӯчаи М.Тӯрсунзода хонаи 45\n\n"
+            "📞 Телефон: +992 93 539 84 48"
         ),
         "address_caption_tajikistan": (
             "📍 <b>Суроғаи мо дар Душанбе:</b>\n"

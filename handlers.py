@@ -724,9 +724,19 @@ async def show_address_callback(update: Update, context: ContextTypes.DEFAULT_TY
     address_type = query.data.split('_')[1]
     
     if address_type == "china":
-        # Китай
+        # Китай — показываем адрес в зависимости от региона
+        user_id = update.effective_user.id
+        from db_utils import get_user
+        user_record = await get_user(user_id)
+        raw_region = user_record.get('region', 'Бохтар') if user_record else 'Бохтар'
+        region = normalize_region(raw_region)
+        
+        if region == 'Кабодиён':
+            caption = get_text('address_caption_china_qubodiyon', lang)
+        else:
+            caption = get_text('address_caption_china_bokhtar', lang)
+        
         photo_path = PHOTO_ADDRESS_CHINA_PATH
-        caption = get_text('address_caption_china', lang)
         await send_photo_safe(
             context, query.message.chat_id, photo_path, caption,
             text_fallback=get_text('photo_address_error', lang).format(address=caption)
@@ -747,8 +757,11 @@ async def show_address_callback(update: Update, context: ContextTypes.DEFAULT_TY
         LONGITUDE = 68.754744
         await query.message.reply_location(latitude=LATITUDE, longitude=LONGITUDE)
 
-        # 2. Текст + Кнопка видео
-        caption = get_text('address_caption_tajikistan', lang)
+        # 2. Текст + Кнопка видео (выбираем адрес по регионам)
+        if region == 'Кабодиён':
+            caption = get_text('address_caption_tajikistan_qubodiyon', lang)
+        else:
+            caption = get_text('address_caption_tajikistan_bokhtar', lang)
         
         # Текст кнопки на языках
         btn_text = "🎬 Video Guide"
@@ -785,17 +798,37 @@ async def show_video_tajik_callback(update: Update, context: ContextTypes.DEFAUL
         return MAIN_MENU
 
     try:
+        # Получаем регион пользователя
+        user_id = update.effective_user.id
+        from db_utils import get_user
+        user_record = await get_user(user_id)
+        raw_region = user_record.get('region', 'Бохтар') if user_record else 'Бохтар'
+        region = normalize_region(raw_region)
+        
         # 2. Пишем сообщение "Подождите", чтобы клиент не паниковал
         status_msg = await query.message.reply_text(f"{wait_text} 0%")
+        
+        # Выбираем адрес в зависимости от региона
+        if region == 'Кабодиён':
+            if lang == 'ru':
+                video_caption = "📍 Кучаи М.Турсунзода хонаи 45"
+            elif lang == 'tg':
+                video_caption = "📍 Кӯчаи М.Турсунзода хонаи 45"
+            else:
+                video_caption = "📍 M.Tursunzoda Street, House 45"
+        else:  # Бохтар
+            if lang == 'ru':
+                video_caption = "📍 кучаи С.Айни 67\n(Назди Кругавои ш.Бохтар, назди Маркази омузишии 'Зам-зам')"
+            elif lang == 'tg':
+                video_caption = "📍 Кӯчаи С.Айнӣ 67\n(Назди Қарғави ш.Бохтар, назди Маркази омузишии 'Зам-зам')"
+            else:
+                video_caption = "📍 S.Ayni Street 67\n(Near Khargovar Bokhtar, near Zam-zam educational center)"
         
         # 3. Отправляем видео
         with open(VIDEO_ADDRESS_TAJIK_PATH, 'rb') as video_file:
             await query.message.reply_video(
                 video=video_file,
-                caption=(
-                    "📍 Улица Дилкушо, 26/1\n"
-                    "Сино район, Душанбе (Ориентир: бозорчаи Ҷал-Ҷам)"
-                ),
+                caption=video_caption,
                 supports_streaming=True, # Позволяет смотреть сразу, не скачивая полностью
                 read_timeout=60,
                 write_timeout=60
