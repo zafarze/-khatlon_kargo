@@ -34,6 +34,7 @@ else:
 # --- ID Администраторов ---
 ADMIN_USER_IDS = [
     515809298,   # Zafar
+    7990324820,  # uktam2222
 ]
 
 logger.info(f"✅ Загружено {len(ADMIN_USER_IDS)} ID администраторов")
